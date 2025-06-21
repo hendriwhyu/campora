@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+	font-family: "Poppins", sans-serif;
+	margin: 0%;
+	padding: 0%;
+	width: 100%;
+	background-color: #fffdf1;
+	scroll-behavior: smooth;
+}
+
+.logo-text {
+	color: #4caf50;
+	font-weight: bold;
+}
+
+.nav-container {
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 50px;
+	padding: 8px 16px;
+}
+
+.login-btn {
+	background-color: #ffffff;
+	color: #347928;
+	border-radius: 40px;
+	padding: 14px 20px;
+	font-weight: 600;
+}
+
+.start-journey-btn {
+	background-color: #ffffff;
+	color: #347928;
+	border-radius: 50px;
+	padding: 10px 24px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.start-journey-btn:hover {
+	background-color: #3e8e41;
+	transform: translateY(-2px);
+}
+
+.hero-title {
+	font-size: 5rem;
+	font-weight: 700;
+	line-height: 1.1;
+	color: white;
+}
+
+.hero-title .alive {
+	color: #4caf50;
+}
+
+.hero-subtitle {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.2rem;
+	max-width: 600px;
+}
+
+.award-badge {
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 8px;
+	padding: 8px 16px;
+	color: white;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
+	cursor: pointer;
+	transition: all 0.3s;
+	z-index: 200;
+}
+
+.hamburger span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #ffffff;
+	border-radius: 3px;
+	transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+	transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+	transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transform: translateY(-20px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	margin-top: 10px;
+	z-index: 100;
+}
+
+.mobile-menu.active {
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.mobile-menu a {
+	padding: 0.75rem 1rem;
+	color: #333;
+	font-weight: 500;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	transition: all 0.3s;
+}
+
+.mobile-menu a:last-child {
+	border-bottom: none;
+}
+
+.mobile-menu a:hover {
+	background-color: rgba(76, 175, 80, 0.1);
+	color: #4caf50;
+}
+
+.card {
+	background-color: #fff;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+	color: #333;
+}
+
+/* Styling untuk thumbnail yang bisa diklik */
+.grid img {
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.grid img:hover {
+	transform: scale(1.05);
+}
+
+/* Animasi untuk modal */
+#imageModal.active {
+	display: flex;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Swiper Styles */
+.swiper {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 0 10px !important;
+    overflow: visible !important;
+}
+
+.swiper-slide {
+	font-size: 18px;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+}
+
+/* Pagination Bullets */
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	opacity: 0.5;
+	background: white !important;
+	transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: #fff !important;
+	width: 20px !important;
+	border-radius: 5px !important;
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+	color: #105104 !important;
+	background-color: #fff;
+	width: 72px !important;
+	height: 30px !important;
+	border-radius: 40px;
+	transition: all 0.3s ease;
+    top: 45% !important;
+}
+.swiper-button-next {
+    right: -20px !important;
+}
+.swiper-button-prev {
+    left: -20px !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-size: 18px !important;
+    font-weight: 700 !important;
+}
