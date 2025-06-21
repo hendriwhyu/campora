@@ -3,13 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Campora - Curated Camping Escapes</title>
+		<title>Campora - Jelajahi Alam Indonesia</title>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 		<link rel="stylesheet" href="style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
+		<!-- FullCalendar CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.css" />
+		<link rel="stylesheet" href="fullcalendar.css" />
 	</head>
 	<body>
 		<main class="mx-auto">
@@ -710,6 +713,55 @@
 					</div>
 				</div>
 			</section>
+			<!-- Calendar Section -->
+			<section class="w-full relative flex flex-col gap-6 px-6.25 py-12 md:py-16">
+				<img src="energy_savings_leaf.svg" alt="watermark-energy" class="absolute top-0 right-0">
+				<div class="flex flex-col gap-4">
+					<span
+						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] font-semibold w-fit px-6 py-2 rounded-full"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="#4CAF50"
+						>
+							<path
+								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+							/>
+							<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
+						</svg>
+						Cek Jadwal
+					</span>
+					<h2 class="text-4xl font-bold">
+						Pilih Jadwal Petualanganmu
+					</h2>
+					<p class="max-w-2xl">
+						Cek tanggal open trip Anak Alam untuk pendakian dan canyoneering.
+					</p>
+				</div>
+				<div class="w-full mx-auto bg-white rounded-2xl shadow-md overflow-hidden px-[10px]">
+					<!-- FullCalendar Container -->
+					<div id="calendar"></div>
+					
+					<!-- Legend -->
+					<div class="flex justify-center gap-6 p-4 border-t mt-4">
+						<div class="flex items-center gap-2">
+							<div class="w-4 h-4 bg-[#E8F4E6] rounded"></div>
+							<span class="text-sm">Hijau – tersedia</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-4 h-4 bg-[#FFF9DB] rounded"></div>
+							<span class="text-sm">Kuning – terbatas</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-4 h-4 bg-[#FFEBEB] rounded"></div>
+							<span class="text-sm">Merah – penuh</span>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<div
@@ -736,4 +788,7 @@
 	<script src="script.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="swiper.js"></script>
+	<!-- FullCalendar JS -->
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+	<script src="fullcalendar.js"></script>
 </html>

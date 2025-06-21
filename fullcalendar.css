@@ -1,0 +1,86 @@
+/* Styling kustom untuk FullCalendar */
+
+/* Warna latar belakang untuk status ketersediaan */
+.fc-day-available {
+    background-color: #E8F4E6 !important;
+}
+
+.fc-day-limited {
+    background-color: #FFF9DB !important;
+}
+
+.fc-day-full {
+    background-color: #FFEBEB !important;
+}
+
+/* Styling untuk header kalender */
+.fc-header-toolbar {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0 !important;
+}
+
+.fc-toolbar-title {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+}
+
+/* Styling untuk tombol navigasi */
+.fc-prev-button, .fc-next-button {
+    background-color: transparent !important;
+    border: none !important;
+    color: #333 !important;
+    box-shadow: none !important;
+}
+
+.fc-prev-button:hover, .fc-next-button:hover {
+    background-color: #f3f4f6 !important;
+}
+
+/* Styling untuk hari dalam minggu */
+.fc-col-header-cell {
+    padding: 0.5rem 0;
+    background-color: #f9fafb;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+/* Styling untuk sel tanggal */
+.fc-daygrid-day {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.fc-daygrid-day:hover {
+    font-weight: bold;
+}
+
+.fc-daygrid-day-number {
+    padding: 0.5rem;
+}
+
+/* Styling untuk tanggal dari bulan lain */
+.fc-day-other .fc-daygrid-day-number {
+    opacity: 0.5;
+}
+
+/* Styling untuk hari ini */
+.fc-day-today {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 640px) {
+    .fc-toolbar-title {
+        font-size: 1rem !important;
+    }
+    
+    .fc-col-header-cell {
+        padding: 0.25rem 0;
+        font-size: 0.75rem;
+    }
+    
+    .fc-daygrid-day-number {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+}

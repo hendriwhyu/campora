@@ -1,13 +1,10 @@
-const swiper = new Swiper(".swiper", {
+// Inisialisasi Swiper dan menyimpannya ke variabel global
+window.swiper = new Swiper(".swiper", {
 	// Efek fade untuk transisi yang lebih halus
 	effect: "fade",
 	fadeEffect: {
 		crossFade: true
 	},
-	
-	// Loop
-	loop: true,
-	
 	// Pagination
 	pagination: {
 		el: ".swiper-pagination",
@@ -25,4 +22,9 @@ const swiper = new Swiper(".swiper", {
 		el: ".swiper-scrollbar",
 		hide: true,
 	},
+	
+	// Aktifkan observer untuk memperbarui Swiper saat elemen diubah
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
 });
