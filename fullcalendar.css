@@ -1,16 +1,14 @@
-/* Styling kustom untuk FullCalendar */
-
 /* Warna latar belakang untuk status ketersediaan */
 .fc-day-available {
-    background-color: #E8F4E6 !important;
+    background-color: #A6FFA2 !important;
 }
 
 .fc-day-limited {
-    background-color: #FFF9DB !important;
+    background-color: #FFFF91 !important;
 }
 
 .fc-day-full {
-    background-color: #FFEBEB !important;
+    background-color: #FF9C7B !important;
 }
 
 /* Styling untuk header kalender */

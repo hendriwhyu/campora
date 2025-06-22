@@ -143,5 +143,3 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 });
-
-// Kode kalender lama telah dihapus dan digantikan oleh implementasi FullCalendar di fullcalendar.js
