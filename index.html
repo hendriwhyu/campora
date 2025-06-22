@@ -11,7 +11,10 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
 		<!-- FullCalendar CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.css"
+		/>
 		<link rel="stylesheet" href="fullcalendar.css" />
 	</head>
 	<body>
@@ -714,8 +717,14 @@
 				</div>
 			</section>
 			<!-- Calendar Section -->
-			<section class="w-full relative flex flex-col gap-6 px-6.25 py-12 md:py-16">
-				<img src="energy_savings_leaf.svg" alt="watermark-energy" class="absolute top-0 right-0">
+			<section
+				class="w-full relative flex flex-col gap-6 px-6.25 py-12 md:py-16"
+			>
+				<img
+					src="energy_savings_leaf.svg"
+					alt="watermark-energy"
+					class="absolute top-0 right-0"
+				/>
 				<div class="flex flex-col gap-4">
 					<span
 						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] font-semibold w-fit px-6 py-2 rounded-full"
@@ -734,19 +743,21 @@
 						</svg>
 						Cek Jadwal
 					</span>
-					<h2 class="text-4xl font-bold">
-						Pilih Jadwal Petualanganmu
-					</h2>
+					<h2 class="text-4xl font-bold">Pilih Jadwal Petualanganmu</h2>
 					<p class="max-w-2xl">
 						Cek tanggal open trip Anak Alam untuk pendakian dan canyoneering.
 					</p>
 				</div>
-				<div class="w-full mx-auto bg-white rounded-2xl shadow-md overflow-hidden p-2.25">
+				<div
+					class="w-full mx-auto bg-white rounded-2xl shadow-md overflow-hidden p-2.25"
+				>
 					<!-- FullCalendar Container -->
 					<div id="calendar"></div>
 				</div>
 				<!-- Legend -->
-				<div class="w-full bg-white shadow-md rounded-2xl flex flex-col md:flex-row justify-center gap-4 p-4 mt-4">
+				<div
+					class="w-full bg-white shadow-md rounded-2xl flex flex-col md:flex-row justify-center gap-4 p-4 mt-4"
+				>
 					<div class="flex items-center gap-2">
 						<div class="w-4 h-4 bg-[#A6FFA2] rounded"></div>
 						<span class="text-sm">Hijau – tersedia</span>
@@ -758,6 +769,52 @@
 					<div class="flex items-center gap-2">
 						<div class="w-4 h-4 bg-[#FF9C7B] rounded"></div>
 						<span class="text-sm">Merah – penuh</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Testimonials Section -->
+			<section
+				class="w-full h-fit relative flex flex-col gap-6 px-6.25 py-12 md:py-16"
+			>
+				<h1
+					class="text-[#F3F3F3CC]/80 absolute font-bold top-25 text-6xl md:text-8xl mx-auto place-self-center"
+				>
+					TESTIMONIALS
+				</h1>
+				<div class="flex flex-col gap-4 z-10 text-center items-center">
+					<span
+						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] font-semibold w-fit px-6 py-2 rounded-full"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="#4CAF50"
+						>
+							<path
+								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+							/>
+							<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
+						</svg>
+						Testimoni
+					</span>
+					<h2 class="text-4xl font-bold text-black">Apa Kata Mereka?</h2>
+					<p class="text-black max-w-2xl">
+						Cerita seru dari petualang bareng Anak Alam :
+					</p>
+				</div>
+				<div id="testimonial-section" class="w-full">
+
+					<div class="swiper testimonial-swiper">
+						<div class="swiper-wrapper">
+							<!-- Slides akan dirender secara dinamis -->
+						</div>
+						<!-- Navigasi dan pagination -->
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 					</div>
 				</div>
 			</section>
