@@ -207,3 +207,56 @@ body {
 	font-size: 18px !important;
 	font-weight: 700 !important;
 }
+
+/* Auth Modal Styles */
+#authModal {
+	backdrop-filter: blur(4px);
+}
+
+#authModal .bg-white {
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* User Dropdown Styles */
+#userDropdown {
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	transition: all 0.2s ease-in-out;
+}
+
+#userDropdown.show {
+	display: block;
+	animation: dropdownFadeIn 0.2s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Mobile User Button Hidden State */
+#mobileUserBtn {
+	display: none;
+}
+
+#mobileUserBtn.show {
+	display: flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	#authModal .bg-white {
+		margin: 1rem;
+		max-width: calc(100vw - 2rem);
+	}
+	
+	#userDropdown {
+		width: 280px;
+		right: -1rem;
+	}
+}
