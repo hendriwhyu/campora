@@ -1,9 +1,9 @@
 // Inisialisasi Swiper dan menyimpannya ke variabel global
-window.swiper = new Swiper(".swiper", {
+new Swiper(".destination-swiper", {
 	// Efek fade untuk transisi yang lebih halus
 	effect: "fade",
 	fadeEffect: {
-		crossFade: true
+		crossFade: true,
 	},
 	// Pagination
 	pagination: {
@@ -22,9 +22,22 @@ window.swiper = new Swiper(".swiper", {
 		el: ".swiper-scrollbar",
 		hide: true,
 	},
-	
+
 	// Aktifkan observer untuk memperbarui Swiper saat elemen diubah
 	observer: true,
 	observeParents: true,
 	observeSlideChildren: true,
+});
+const swiper = new Swiper(".testimonial-swiper", {
+	slidesPerView: 1,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	loop: true,
 });

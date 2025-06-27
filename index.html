@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Campora - Jelajahi Alam Indonesia</title>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -15,8 +15,8 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.css"
 		/>
-		<link rel="stylesheet" href="fullcalendar.css" />
-		<link rel="stylesheet" href="testimonial-styles.css" />
+		<link rel="stylesheet" href="./assets/css/fullcalendar.css" />
+		<link rel="stylesheet" href="./assets/css/testimonial-styles.css" />
 	</head>
 	<body>
 		<main class="mx-auto">
@@ -42,16 +42,16 @@
 
 						<!-- Navigation Links (Desktop) -->
 						<nav class="hidden md:flex space-x-6">
-							<a href="/" class="text-white hover:text-green-600 font-medium"
+							<a href="#" class="text-white hover:text-green-600 font-medium"
 								>Home</a
 							>
 							<a
-								href="/why-camping"
+								href="#about"
 								class="text-white hover:text-green-600 font-medium"
 								>Why Go Camping</a
 							>
 							<a
-								href="/destinations"
+								href="#destinations"
 								class="text-white hover:text-green-600 font-medium"
 								>Top Destinations</a
 							>
@@ -94,7 +94,7 @@
 
 						<!-- Mobile Menu (Hidden by default) -->
 						<div class="mobile-menu" id="mobile-menu">
-							<a href="/" class="flex flex-row items-center gap-2">
+							<a href="#" class="flex flex-row items-center gap-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="18"
@@ -111,7 +111,7 @@
 								</svg>
 								<span> Home </span>
 							</a>
-							<a href="/why-camping" class="flex items-center gap-2">
+							<a href="#about" class="flex items-center gap-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="18"
@@ -129,7 +129,7 @@
 								</svg>
 								Why Go Camping
 							</a>
-							<a href="/destinations" class="flex items-center gap-2">
+							<a href="#destinations" class="flex items-center gap-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="18"
@@ -214,7 +214,7 @@
 
 			<!-- Hero Section -->
 			<section
-				class="flex flex-col justify-center rounded-4xl mx-4 px-4 md:px-8 lg:px-12 bg-[url('./waterfall-canyeonaring.webp')] bg-cover bg-center my-4 h-screen"
+				class="flex flex-col justify-center rounded-4xl mx-4 px-4 md:px-8 lg:px-12 bg-[url('./assets/img/waterfall-canyeonaring.webp')] bg-cover bg-center my-4 h-screen"
 			>
 				<div>
 					<div class="flex flex-col">
@@ -257,7 +257,7 @@
 			</section>
 
 			<!-- About Section -->
-			<section class="flex flex-col gap-8 mx-4 my-8 p-2.25">
+			<section id="about" class="flex flex-col gap-8 mx-4 my-8 p-2.25">
 				<div class="flex flex-col gap-2">
 					<span class="rounded-full bg-[#EBF2EA] text-black w-fit px-6 py-2"
 						>Why Go Camping</span
@@ -270,7 +270,7 @@
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div class="flex flex-col gap-4">
 						<img
-							src="canyeonaring-1.webp"
+							src="./assets/img/canyeonaring-1.webp"
 							alt="Keamanan Prioritas"
 							class="w-full h-[300px] object-cover rounded-2xl"
 						/>
@@ -289,7 +289,7 @@
 					</div>
 					<div class="flex flex-col gap-4">
 						<img
-							src="canyeonaring-2.webp"
+							src="./assets/img/canyeonaring-2.webp"
 							alt="Rute Terpilih"
 							class="w-full h-[250px] object-cover rounded-2xl"
 						/>
@@ -308,7 +308,7 @@
 					</div>
 					<div class="flex flex-col gap-4">
 						<img
-							src="canyeonaring-3.webp"
+							src="./assets/img/canyeonaring-3.webp"
 							alt="Belajar Sambil Bertualang"
 							class="w-full h-[200px] object-cover rounded-2xl transform scale-x-[-1]"
 						/>
@@ -330,6 +330,7 @@
 
 			<!-- Destination Section -->
 			<section
+				id="destinations"
 				class="w-full bg-[#347928] flex flex-col gap-6 px-4 py-12 md:py-16"
 			>
 				<div class="flex flex-col gap-4 p-[10px]">
@@ -372,11 +373,11 @@
 						</button>
 					</div>
 				</div>
-				<div class="swiper">
+				<div class="swiper destination-swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div
-								class="card shadow-xl/20 !rounded-4xl bg-[url('./curug-destination.png')] bg-cover bg-center h-auto p-5 md:p-8"
+								class="card shadow-xl/20 !rounded-4xl bg-[url('./assets/img/curug-destination.png')] bg-cover bg-center h-auto p-5 md:p-8"
 							>
 								<div class="flex flex-col gap-8">
 									<div class="flex justify-between">
@@ -464,22 +465,22 @@
 										</div>
 										<div class="grid grid-cols-4 items-end gap-2 md:gap-4">
 											<img
-												src="destination-canyeonaring-1.jpg"
+												src="./assets/img/destination-canyeonaring-1.jpg"
 												alt="dokumentasi-1"
 												class="w-full h-[100px] object-cover rounded-xl md:rounded-2xl"
 											/>
 											<img
-												src="destination-canyeonaring-2.jpg"
+												src="./assets/img/destination-canyeonaring-2.jpg"
 												alt="dokumentasi-2"
 												class="w-full h-[100px] object-cover rounded-xl md:rounded-2xl"
 											/>
 											<img
-												src="destination-canyeonaring-1.jpg"
+												src="./assets/img/destination-canyeonaring-1.jpg"
 												alt="dokumentasi-3"
 												class="w-full h-[100px] object-cover rounded-xl md:rounded-2xl"
 											/>
 											<img
-												src="destination-canyeonaring-2.jpg"
+												src="./assets/img/destination-canyeonaring-2.jpg"
 												alt="dokumentasi-4"
 												class="w-full h-[100px] object-cover rounded-xl md:rounded-2xl"
 											/>
@@ -722,10 +723,11 @@
 
 			<!-- Calendar Section -->
 			<section
+				id="calendar"
 				class="w-full relative flex flex-col gap-6 px-6.25 py-12 md:py-16"
 			>
 				<img
-					src="energy_savings_leaf.svg"
+					src="./assets/img/energy_savings_leaf.svg"
 					alt="watermark-energy"
 					class="absolute top-0 right-0"
 				/>
@@ -779,10 +781,11 @@
 
 			<!-- Testimonials Section -->
 			<section
+				id="testimonial"
 				class="w-full h-fit relative flex flex-col gap-6 px-6.25 py-12 md:py-16"
 			>
 				<h1
-					class="text-[#F3F3F3CC]/80 absolute font-bold top-25 text-6xl md:text-8xl mx-auto place-self-center"
+					class="text-[#F3F3F3CC]/80 absolute font-bold top-37 md:top-25 text-[56px] md:text-8xl mx-auto place-self-center"
 				>
 					TESTIMONIALS
 				</h1>
@@ -809,6 +812,12 @@
 						Cerita seru dari petualang bareng Anak Alam :
 					</p>
 				</div>
+				<!-- <div class="swiper testimonial-swiper">
+						<div class="swiper-wrapper">
+						</div>
+						<div class="swiper-pagination"></div>
+					</div> -->
+				<!-- Desktop Grid -->
 				<div class="grid md:grid-cols-3 gap-4">
 					<div class="grid gap-2">
 						<div
@@ -1037,13 +1046,113 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- <div class="swiper testimonial-swiper">
-						<div class="swiper-wrapper">
-						</div>
-						<div class="swiper-pagination"></div>
-					</div> -->
 			</section>
+
+			<!-- CTA Section -->
+			<section id="cta" class="px-6 py-12 md:py-16 bg-[#FDFCF6]">
+				<div
+					class="relative flex flex-col md:flex-row items-center justify-between gap-6 rounded-2xl bg-[#EBF2EA] p-6 md:p-12 overflow-hidden"
+				>
+					<!-- Background Leaf -->
+					<img
+						src="./assets/img/leaf-cta.svg"
+						alt="leaf-cta"
+						class="absolute h-full pointer-events-none z-0 -left-25 md:right-0 md:left-auto top-0"
+					/>
+
+					<!-- Left Content -->
+					<div class="relative z-10 flex flex-col gap-6 max-w-4xl">
+						<div class="flex flex-col gap-4">
+							<span
+								class="inline-flex items-center gap-2 text-sm bg-[#DDDDDD] text-gray-700 font-medium w-fit px-4 py-1.5 rounded-full"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="#4CAF50"
+								>
+									<path
+										d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+									/>
+									<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
+								</svg>
+								Apa yang kamu tunggu?
+							</span>
+							<h1
+								class="text-3xl md:text-5xl font-bold text-[#1E1E1E] leading-tight"
+							>
+								Ayo Mulai Petualanganmu
+							</h1>
+							<p class="text-base md:text-xl text-gray-600">
+								Cukup booking di anak alam, petualanganmu bisa dimulai
+							</p>
+						</div>
+						<a
+							href="#booking"
+							class="inline-flex items-center gap-2 bg-[#347928] text-white px-6 py-3 rounded-full shadow-md w-fit hover:bg-[#2a6021] transition mt-8"
+						>
+							Ayo Mulai Sekarang
+						</a>
+					</div>
+
+					<!-- Right Image (Map) -->
+					<div class="relative hidden md:block z-10 w-[180px] md:w-[300px]">
+						<img
+							src="./assets/img/map-cta.png"
+							alt="map-cta"
+							class="w-full h-auto object-contain"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				<div
+					class="px-6 py-10 md:py-20 bg-[#F4FFF1] flex flex-col md:flex-row gap-8 justify-between"
+				>
+					<div class="flex flex-col gap-4 md:max-w-sm">
+						<img
+							src="./assets/img/logo-footer.svg"
+							alt="footer-logo"
+							class="h-[40px] w-[150px]"
+						/>
+						<p class="font-semibold text-2xl">
+							Escape the Ordinary. Embrace the Wilderness.
+						</p>
+						<span>Anak Alam, 2025.</span>
+					</div>
+					<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+						<div class="flex flex-col gap-2">
+							<h3 class="text-lg font-bold">Kontak kami</h3>
+							<a href="#">Why Go Camping</a>
+							<a href="#">Top Destinations</a>
+							<a href="#">How It Works</a>
+						</div>
+						<div class="flex flex-col gap-2">
+							<h3 class="text-lg font-bold">Company</h3>
+							<a href="#">Blog</a>
+							<a href="#">Careers</a>
+							<a href="#">News</a>
+						</div>
+						<div class="flex flex-col gap-2">
+							<h3 class="text-lg font-bold">Resources</h3>
+							<a href="#">Documentation</a>
+							<a href="#">Press Conferences</a>
+						</div>
+					</div>
+				</div>
+				<div
+					class="px-6 py-8 md:py-8 bg-[#347928] flex flex-col md:flex-row gap-2 justify-between text-white"
+				>
+					<span>&copy; 2025 Anak Alam Inc. All rights reserved.</span>
+					<div class="flex flex-row gap-4">
+						<a href="#">Terms & Conditions</a>
+						<a href="#">Privacy Policy</a>
+					</div>
+				</div>
+			</footer>
 		</main>
 
 		<div
@@ -1069,11 +1178,11 @@
 
 	<script src="script.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="swiper.js"></script>
+	<script src="./assets/js/swiper.js"></script>
 	<!-- FullCalendar JS -->
 	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
-	<script src="fullcalendar.js"></script>
-	<!-- Testimonial Scripts -->
-	<script src="testimonial-data.js"></script>
-	<script src="testimonial-carousel.js"></script>
+	<script src="./assets/js/fullcalendar.js"></script>
+
+	<script src="./assets/js/testimonial-data.js"></script>
+	<script src="./assets/js/testimonial-carousel.js"></script>
 </html>
