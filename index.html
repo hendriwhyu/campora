@@ -28,35 +28,32 @@
 					>
 						<!-- Logo -->
 						<a href="/" class="flex items-center gap-2">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="#4CAF50"
-							>
-								<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z" />
-							</svg>
-							<span class="logo-text text-xl">Campora</span>
+							<img
+								src="./assets/img/logo-header.png"
+								alt="Logo"
+								class="h-[40px] ml-4"
+							/>
 						</a>
 
 						<!-- Navigation Links (Desktop) -->
 						<nav class="hidden md:flex space-x-6">
-							<a href="#" class="text-white hover:text-green-600 font-medium"
+							<a
+								href="#hero-section"
+								class="text-white hover:text-green-600 font-medium"
 								>Home</a
 							>
 							<a
-								href="#about"
+								href="#about-section"
 								class="text-white hover:text-green-600 font-medium"
 								>Why Go Camping</a
 							>
 							<a
-								href="#destinations"
+								href="#destination-section"
 								class="text-white hover:text-green-600 font-medium"
 								>Top Destinations</a
 							>
 							<a
-								href="/how-it-works"
+								href="#calendar-section"
 								class="text-white hover:text-green-600 font-medium"
 								>How It Works</a
 							>
@@ -65,7 +62,7 @@
 						<!-- Hamburger Menu (Mobile) -->
 						<div class="md:hidden flex items-center gap-4">
 							<a
-								href="/start-journey"
+								href="#hero-section"
 								class="start-journey-btn hidden md:flex items-center gap-2 text-sm py-2 px-3"
 							>
 								Start
@@ -214,25 +211,32 @@
 
 			<!-- Hero Section -->
 			<section
+				id="hero-section"
 				class="flex flex-col justify-center rounded-4xl mx-4 px-4 md:px-8 lg:px-12 bg-[url('./assets/img/waterfall-canyeonaring.webp')] bg-cover bg-center my-4 h-screen"
 			>
 				<div>
-					<div class="flex flex-col">
-						<h1 class="text-white font-bold text-6xl mb-6">
-							Go Wild.<br />
-							Feel <span class="text-green-600">Alive</span>
+					<div class="flex flex-col gap-8 max-w-5xl">
+						<h1 class="text-white font-bold text-4xl md:text-8xl">
+							Petualangan Seru Tanpa Drama
 						</h1>
-						<p class="hero-subtitle mb-8">
-							Curated Camping Escapes To Reconnect You With Nature—And Yourself
+						<p class="text-white text-lg max-w-4xl">
+							Bersama Anak Alam, semua siap — kamu tinggal berangkat dan nikmati
+							alam.
 						</p>
 					</div>
 					<div
 						class="mt-20 flex flex-col-reverse md:flex-row gap-8 justify-between"
 					>
-						<div>
+						<div class="flex flex-col md:flex-row gap-4 text-center">
 							<a
-								href="/start-journey"
-								class="start-journey-btn inline-flex items-center gap-2 text-lg"
+								href="#destination-section"
+								class="border border-white bg-transparent px-6 py-2.5 rounded-full text-lg text-white"
+							>
+								Cek Paket
+							</a>
+							<a
+								href="#destination-section"
+								class="start-journey-btn inline-flex justify-center items-center gap-2 text-lg"
 							>
 								Ayo Mulai Sekarang
 								<svg
@@ -257,14 +261,15 @@
 			</section>
 
 			<!-- About Section -->
-			<section id="about" class="flex flex-col gap-8 mx-4 my-8 p-2.25">
+			<section id="about-section" class="flex flex-col gap-8 mx-4 my-8 p-2.25">
 				<div class="flex flex-col gap-2">
 					<span class="rounded-full bg-[#EBF2EA] text-black w-fit px-6 py-2"
-						>Why Go Camping</span
+						>Kenapa Anak Alam</span
 					>
-					<h1 class="text-2xl text-black font-semibold">Why Choose Campora?</h1>
+					<h1 class="text-4xl text-black font-semibold">Kenapa Anak Alam?</h1>
 					<p class="text-[#666161]">
-						Here's what you'll find when you let the wild in with Campora
+						Kami percaya petualangan terbaik adalah yang menyentuh hati, memacu
+						adrenalin, dan memberi makna
 					</p>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -330,12 +335,12 @@
 
 			<!-- Destination Section -->
 			<section
-				id="destinations"
+				id="destination-section"
 				class="w-full bg-[#347928] flex flex-col gap-6 px-4 py-12 md:py-16"
 			>
 				<div class="flex flex-col gap-4 p-[10px]">
 					<span
-						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] font-semibold w-fit px-6 py-2 rounded-full"
+						class="inline-flex items-center gap-2 text-black bg-[#EBF2EA] w-fit px-6 py-2 rounded-full"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -349,7 +354,7 @@
 							/>
 							<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
 						</svg>
-						Kenapa Anak Alam
+						Paket Destinasi
 					</span>
 					<h2 class="text-4xl font-bold text-white">
 						Jelajahi Curug & Gunung Terbaik
@@ -723,6 +728,7 @@
 
 			<!-- Calendar Section -->
 			<section
+				id="calendar-section"
 				class="w-full relative flex flex-col gap-6 px-6.25 py-12 md:py-16"
 			>
 				<img
@@ -732,7 +738,7 @@
 				/>
 				<div class="flex flex-col gap-4">
 					<span
-						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] font-semibold w-fit px-6 py-2 rounded-full"
+						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] w-fit px-6 py-2 rounded-full"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -778,7 +784,7 @@
 
 			<!-- Testimonials Section -->
 			<section
-				id="testimonial"
+				id="testimonial-section"
 				class="w-full h-fit relative flex flex-col gap-6 px-6.25 py-12 md:py-16"
 			>
 				<h1
@@ -815,7 +821,7 @@
 						<div class="swiper-pagination"></div>
 					</div> -->
 				<!-- Desktop Grid -->
-				<div class="grid md:grid-cols-3 gap-4">
+				<div class="grid md:grid-cols-3 gap-4 px-6">
 					<div class="grid gap-2">
 						<div
 							class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
@@ -1046,7 +1052,7 @@
 			</section>
 
 			<!-- CTA Section -->
-			<section id="cta" class="px-6 py-12 md:py-16 bg-[#FDFCF6]">
+			<section id="cta-section" class="px-6 py-12 md:py-16 bg-[#FDFCF6]">
 				<div
 					class="relative flex flex-col md:flex-row items-center justify-between gap-6 rounded-2xl bg-[#EBF2EA] p-6 md:p-12 overflow-hidden"
 				>

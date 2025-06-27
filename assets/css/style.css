@@ -21,11 +21,16 @@ body {
 }
 
 .login-btn {
-	background-color: #ffffff;
-	color: #347928;
-	border-radius: 40px;
-	padding: 14px 20px;
+	align-items: center;
+	gap: 10px;
+	background: linear-gradient(150deg, #51c23d, #28721b);
+	color: white;
 	font-weight: 600;
+	padding: 12px 20px;
+	border-radius: 999px;
+	text-decoration: none;
+	box-shadow: inset 0 0 4px #ffffff;
+	transition: transform 0.2s ease;
 }
 
 .start-journey-btn {
@@ -39,34 +44,7 @@ body {
 
 .start-journey-btn:hover {
 	background-color: #3e8e41;
-	transform: translateY(-2px);
-}
-
-.hero-title {
-	font-size: 5rem;
-	font-weight: 700;
-	line-height: 1.1;
-	color: white;
-}
-
-.hero-title .alive {
-	color: #4caf50;
-}
-
-.hero-subtitle {
-	color: rgba(255, 255, 255, 0.9);
-	font-size: 1.2rem;
-	max-width: 600px;
-}
-
-.award-badge {
-	background-color: rgba(0, 0, 0, 0.6);
-	border-radius: 8px;
-	padding: 8px 16px;
-	color: white;
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
+	color: #ffffff;
 }
 
 /* Hamburger Menu Styles */
@@ -179,8 +157,8 @@ body {
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-    padding: 0 10px !important;
-    overflow: visible !important;
+	padding: 0 10px !important;
+	overflow: visible !important;
 }
 
 .swiper-slide {
@@ -215,17 +193,17 @@ body {
 	height: 30px !important;
 	border-radius: 40px;
 	transition: all 0.3s ease;
-    top: 45% !important;
+	top: 45% !important;
 }
 .swiper-button-next {
-    right: -20px !important;
+	right: -20px !important;
 }
 .swiper-button-prev {
-    left: -20px !important;
+	left: -20px !important;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
 	font-size: 18px !important;
-    font-weight: 700 !important;
+	font-weight: 700 !important;
 }
