@@ -59,65 +59,6 @@
 							>
 						</nav>
 
-						<!-- Hamburger Menu (Mobile) -->
-						<div class="md:hidden flex items-center gap-4">
-							<button
-								id="mobileLoginBtn"
-								class="login-btn flex md:hidden items-center gap-2 text-sm py-2 px-3"
-							>
-								Masuk
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<circle cx="12" cy="12" r="10" />
-									<path d="M12 8l4 4-4 4" />
-									<path d="M8 12h8" />
-								</svg>
-							</button>
-
-							<!-- Mobile User Button - Hidden by default -->
-							<div id="mobileUserBtn" class="flex md:hidden relative">
-								<button
-									class="flex items-center gap-2 bg-[#347928] text-white px-3 py-2 rounded-full text-sm"
-								>
-									<div
-										class="w-6 h-6 bg-white rounded-full flex items-center justify-center"
-									>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="12"
-											height="12"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="#347928"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										>
-											<path
-												d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
-											></path>
-											<circle cx="12" cy="7" r="4"></circle>
-										</svg>
-									</div>
-									<span>Partner</span>
-								</button>
-							</div>
-							<div class="hamburger mr-2" id="hamburger-menu">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-						</div>
-
 						<!-- Mobile Menu (Hidden by default) -->
 						<div class="mobile-menu" id="mobile-menu">
 							<a href="#" class="flex flex-row items-center gap-2">
@@ -192,11 +133,11 @@
 							</a>
 						</div>
 
-						<div class="hidden md:flex flex-row">
+						<div class="flex flex-row items-center gap-2">
 							<!-- Login Button (Desktop) -->
 							<button
 								id="loginBtn"
-								class="hidden md:flex login-btn items-center gap-2"
+								class="hidden flex login-btn items-center gap-2 text-nowrap"
 							>
 								Masuk
 								<svg
@@ -363,6 +304,12 @@
 										</div>
 									</div>
 								</div>
+							</div>
+
+							<div class="hamburger mr-2 flex md:hidden!" id="hamburger-menu">
+								<span></span>
+								<span></span>
+								<span></span>
 							</div>
 						</div>
 					</div>
