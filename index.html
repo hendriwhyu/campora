@@ -82,13 +82,29 @@
 									<path d="M8 12h8" />
 								</svg>
 							</button>
-							
+
 							<!-- Mobile User Button - Hidden by default -->
 							<div id="mobileUserBtn" class="flex md:hidden relative">
-								<button class="flex items-center gap-2 bg-[#347928] text-white px-3 py-2 rounded-full text-sm">
-									<div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#347928" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+								<button
+									class="flex items-center gap-2 bg-[#347928] text-white px-3 py-2 rounded-full text-sm"
+								>
+									<div
+										class="w-6 h-6 bg-white rounded-full flex items-center justify-center"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="12"
+											height="12"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="#347928"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path
+												d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+											></path>
 											<circle cx="12" cy="7" r="4"></circle>
 										</svg>
 									</div>
@@ -176,7 +192,7 @@
 							</a>
 						</div>
 
-						<div class="flex flex-row">
+						<div class="hidden md:flex flex-row">
 							<!-- Login Button (Desktop) -->
 							<button
 								id="loginBtn"
@@ -199,53 +215,148 @@
 									<path d="M8 12h8" />
 								</svg>
 							</button>
-	
+
 							<!-- User Button (Desktop) - Hidden by default -->
 							<div id="userBtn" class="hidden relative">
-								<button class="flex items-center gap-2 bg-[#347928] text-white px-4 py-2 rounded-full">
-									<div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#347928" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+								<button
+									class="flex items-center gap-2 bg-[#347928] text-white px-4 py-2 rounded-full"
+								>
+									<div
+										class="w-8 h-8 bg-white rounded-full flex items-center justify-center"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="#347928"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path
+												d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+											></path>
 											<circle cx="12" cy="7" r="4"></circle>
 										</svg>
 									</div>
 									<span>Partner</span>
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="16"
+										height="16"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
 										<polyline points="6 9 12 15 18 9"></polyline>
 									</svg>
 								</button>
 								<!-- User Dropdown Menu -->
-								<div id="userDropdown" class="absolute top-full right-0 mt-2 w-64 bg-white rounded-2xl shadow-lg border border-gray-200 hidden z-50">
+								<div
+									id="userDropdown"
+									class="absolute top-full right-0 mt-2 w-64 bg-white rounded-2xl shadow-lg border border-gray-200 hidden z-50"
+								>
 									<div class="p-4">
 										<div class="flex items-center gap-3 mb-4">
-											<div class="w-12 h-12 bg-[#347928] rounded-full flex items-center justify-center">
-												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-													<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+											<div
+												class="w-12 h-12 bg-[#347928] rounded-full flex items-center justify-center"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="20"
+													height="20"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="white"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												>
+													<path
+														d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+													></path>
 													<circle cx="12" cy="7" r="4"></circle>
 												</svg>
 											</div>
 											<div>
 												<h3 class="font-semibold text-gray-900">Pengaturan</h3>
-												<p class="text-sm text-gray-600">Cukup isi form dibawah ini untuk mulai petualanganmu</p>
+												<p class="text-sm text-gray-600">
+													Cukup isi form dibawah ini untuk mulai petualanganmu
+												</p>
 											</div>
 										</div>
 										<div class="space-y-2">
-											<a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-													<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+											<a
+												href="#"
+												class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="20"
+													height="20"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												>
+													<path
+														d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+													></path>
 													<circle cx="12" cy="7" r="4"></circle>
 												</svg>
 												<span class="text-gray-700">Profil</span>
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-auto">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="ml-auto"
+												>
 													<polyline points="9 18 15 12 9 6"></polyline>
 												</svg>
 											</a>
-											<a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<a
+												href="#"
+												class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="20"
+													height="20"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												>
 													<path d="M3 3h18v18H3zM9 9h6v6H9z"></path>
 												</svg>
 												<span class="text-gray-700">Riwayat Transaksi</span>
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-auto">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="ml-auto"
+												>
 													<polyline points="9 18 15 12 9 6"></polyline>
 												</svg>
 											</a>
@@ -499,6 +610,7 @@
 
 											<button
 												class="bg-[#347928] rounded-full text-white px-4 py-2 w-full md:w-fit flex items-center justify-center gap-2 font-medium cursor-pointer"
+												data-booking-btn
 											>
 												Booking Sekarang
 												<svg
@@ -611,6 +723,7 @@
 
 											<button
 												class="bg-[#347928] rounded-full text-white px-4 py-2 w-full md:w-fit flex items-center justify-center gap-2 font-medium cursor-pointer"
+												data-booking-btn
 											>
 												Booking Sekarang
 												<svg
@@ -722,6 +835,7 @@
 
 											<button
 												class="bg-[#347928] rounded-full text-white px-4 py-2 w-full md:w-fit flex items-center justify-center gap-2 font-medium cursor-pointer"
+												data-booking-btn
 											>
 												Booking Sekarang
 												<svg
@@ -864,13 +978,259 @@
 						Cerita seru dari petualang bareng Anak Alam :
 					</p>
 				</div>
-				<!-- <div class="swiper testimonial-swiper">
+				<!-- Mobile -->
+				<div class="md:hidden px-6">
+					<div class="swiper testimonial-swiper">
 						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="flex flex-col gap-2">
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/93.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Erlan Adolfo</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Employee</span
+												>
+											</div>
+											<p class="text-sm">
+												"I booked a weekend with Wildaway and came back with a
+												year's worth of memories. Pure magic, The campfire
+												storytelling felt like a scene from a movie."
+											</p>
+										</div>
+									</div>
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/20.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Boby Family</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Family</span
+												>
+											</div>
+											<p class="text-sm">
+												"The best family trip we’ve ever had. Our kids still
+												talk about the campfire stories! This trip was truly
+												unforgettable for our entire family. From the moment we
+												arrived, everything felt magical."
+											</p>
+										</div>
+									</div>
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/16.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Sumiler Angin</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Adventurer</span
+												>
+											</div>
+											<p class="text-sm">
+												"I joined this trip solo, not really knowing what to
+												expect—but I ended up finding a sense of connection I
+												didn’t even know I needed. The campfire stories were the
+												highlight for me. Sitting under the stars, surrounded by
+												new friends, listening and sharing stories—it reminded
+												me of how powerful simple moments can be. I came alone,
+												but I left with memories and bonds that felt like
+												family"
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 2 -->
+							<div class="swiper-slide">
+								<div class="flex flex-col gap-2">
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/24.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Piko Group</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Company</span
+												>
+											</div>
+											<p class="text-sm">
+												"As someone who’s always on the lookout for experiences
+												that combine nature, bonding, and just plain fun. The
+												campfire storytelling felt like a scene from a movie.
+												Even the kids, who are usually glued to screens, were
+												hooked. This wasn’t just a vacation—it was a beautiful
+												pause in our busy lives."
+											</p>
+										</div>
+									</div>
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/29.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Johny Evans</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Athletes</span
+												>
+											</div>
+											<p class="text-sm">
+												"Okay, I didn’t think I’d enjoy this trip that much at
+												first—but it turned out to be awesome. The campfire
+												night? Super cool. The stories were spooky but fun, and
+												we all just kinda chilled under the stars. Even my
+												little brother stopped being annoying for once 😅. We
+												actually talked and laughed a lot. Would totally go
+												again"
+											</p>
+										</div>
+									</div>
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/45.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Antony</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Employee</span
+												>
+											</div>
+											<p class="text-sm">
+												"I don’t get a lot of time off work, so when we take a
+												family trip, it really needs to count. And this one?
+												Nailed it."
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 3 -->
+							<div class="swiper-slide">
+								<div class="flex flex-col gap-2">
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/32.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Zorojuro Al Loyal</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Employee</span
+												>
+											</div>
+											<p class="text-sm">
+												"After months of nonstop work, I needed a break. This
+												trip gave me space to breathe, think, and just be
+												present. The campfire night was healing in ways I didn’t
+												expect. Listening to stories, feeling the warmth of the
+												fire, and being surrounded by kind people—it reminded me
+												how important it is to slow down sometimes."
+											</p>
+										</div>
+									</div>
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/36.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Mimi Pero</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Former Child</span
+												>
+											</div>
+											<p class="text-sm">
+												"I brought my dog along thinking we’d just enjoy nature
+												but we ended up making unexpected memories!"
+											</p>
+										</div>
+									</div>
+									<div
+										class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
+									>
+										<img
+											src="https://mighty.tools/mockmind-api/content/human/42.jpg"
+											alt="avatar"
+											class="w-12 h-12 rounded-full"
+										/>
+										<div class="flex flex-col gap-2">
+											<div class="flex flex-row justify-between items-center">
+												<h3 class="text-lg font-bold">Salman</h3>
+												<span
+													class="text-xs text-[#666161] bg-[#EFEFEF] py-1 px-2 rounded-full"
+													>Remote Worker</span
+												>
+											</div>
+											<p class="text-sm">
+												"As someone who works remotely while traveling, I’ve
+												been to a lot of places—but this trip really stood out.
+												Between Zoom calls and deadlines, I got to unwind in a
+												way that felt real. The campfire night was my favorite:
+												no Wi-Fi, no distractions, just real people sharing
+												stories under the stars."
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-pagination"></div>
-					</div> -->
+
+						<!-- Pagination -->
+						<div class="swiper-pagination mt-4"></div>
+					</div>
+				</div>
 				<!-- Desktop Grid -->
-				<div class="grid md:grid-cols-3 gap-4 px-6">
+				<div class="hidden md:grid md:grid-cols-3 gap-4 px-6">
 					<div class="grid gap-2">
 						<div
 							class="card h-fit p-4 flex flex-row gap-4 rounded-2xl shadow-md"
@@ -1208,118 +1568,254 @@
 		</main>
 
 		<!-- Login/Register Modal -->
-		<div id="authModal" class="fixed inset-0 z-200 hidden bg-black/50 flex items-center justify-center p-4">
+		<div
+			id="authModal"
+			class="fixed hidden inset-0 z-200 bg-black/50 flex items-center justify-center p-4"
+		>
 			<div class="relative bg-white rounded-2xl w-full max-w-md mx-4">
-				<button id="closeAuthModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<button
+					id="closeAuthModal"
+					class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
 						<line x1="18" y1="6" x2="6" y2="18"></line>
 						<line x1="6" y1="6" x2="18" y2="18"></line>
 					</svg>
 				</button>
-				
+
 				<!-- Login Form -->
 				<div id="loginForm" class="p-6">
 					<div class="text-center mb-6">
 						<h2 class="text-2xl font-bold text-gray-900 mb-2">Masuk</h2>
 						<p class="text-gray-600">Selamat datang kembali ke Anak Alam</p>
 					</div>
-					
+
 					<form class="space-y-4">
 						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-							<input type="email" placeholder="Masukkan nama lengkap kamu disini" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none">
+							<label class="block text-sm font-medium text-gray-700 mb-1"
+								>Email</label
+							>
+							<input
+								type="email"
+								placeholder="Masukkan nama lengkap kamu disini"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none"
+							/>
 						</div>
-						
+
 						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-1">Kata Sandi</label>
+							<label class="block text-sm font-medium text-gray-700 mb-1"
+								>Kata Sandi</label
+							>
 							<div class="relative">
-								<input type="password" placeholder="Masukkan nomor kata sandi kamu disini" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none pr-12">
-								<button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-										<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+								<input
+									type="password"
+									placeholder="Masukkan nomor kata sandi kamu disini"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none pr-12"
+								/>
+								<button
+									type="button"
+									class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+										></path>
 										<circle cx="12" cy="12" r="3"></circle>
 									</svg>
 								</button>
 							</div>
 						</div>
-						
+
 						<div class="flex items-center">
-							<input type="checkbox" id="remember" class="w-4 h-4 text-[#347928] border-gray-300 rounded focus:ring-[#347928]">
-							<label for="remember" class="ml-2 text-sm text-gray-600">Ingat saya</label>
+							<input
+								type="checkbox"
+								id="remember"
+								class="w-4 h-4 text-[#347928] border-gray-300 rounded focus:ring-[#347928]"
+							/>
+							<label for="remember" class="ml-2 text-sm text-gray-600"
+								>Ingat saya</label
+							>
 						</div>
-						
-						<button type="submit" class="w-full bg-[#347928] text-white py-3 rounded-lg font-medium hover:bg-[#2a6021] transition-colors">
+
+						<button
+							type="submit"
+							class="w-full bg-[#347928] text-white py-3 rounded-lg font-medium hover:bg-[#2a6021] transition-colors"
+						>
 							Masuk
 						</button>
-						
+
 						<div class="text-center">
 							<span class="text-gray-500">Atau</span>
 						</div>
-						
-						<button type="button" class="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-								<path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-								<path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-								<path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-								<path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+
+						<button
+							type="button"
+							class="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="#4285F4"
+									d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+								/>
+								<path
+									fill="#34A853"
+									d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+								/>
+								<path
+									fill="#FBBC05"
+									d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+								/>
+								<path
+									fill="#EA4335"
+									d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+								/>
 							</svg>
 							Masuk dengan Google
 						</button>
-						
+
 						<div class="text-center">
 							<span class="text-gray-600">Belum punya akun? </span>
-							<button type="button" id="showRegister" class="text-[#347928] font-medium hover:underline">Daftar Sekarang</button>
+							<button
+								type="button"
+								id="showRegister"
+								class="text-[#347928] font-medium hover:underline"
+							>
+								Daftar Sekarang
+							</button>
 						</div>
 					</form>
 				</div>
-				
+
 				<!-- Register Form -->
 				<div id="registerForm" class="p-6 hidden">
 					<div class="text-center mb-6">
 						<h2 class="text-2xl font-bold text-gray-900 mb-2">Daftar</h2>
-						<p class="text-gray-600">Silahkan isi data berikut untuk dapat menggunakan Anak Alam</p>
+						<p class="text-gray-600">
+							Silahkan isi data berikut untuk dapat menggunakan Anak Alam
+						</p>
 					</div>
-					
+
 					<form class="space-y-4">
 						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-							<input type="email" placeholder="Masukkan nama lengkap kamu disini" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none">
+							<label class="block text-sm font-medium text-gray-700 mb-1"
+								>Email</label
+							>
+							<input
+								type="email"
+								placeholder="Masukkan nama lengkap kamu disini"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none"
+							/>
 						</div>
-						
+
 						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-1">Kata Sandi</label>
+							<label class="block text-sm font-medium text-gray-700 mb-1"
+								>Kata Sandi</label
+							>
 							<div class="relative">
-								<input type="password" placeholder="Masukkan nomor kata sandi kamu disini" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none pr-12">
-								<button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-										<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+								<input
+									type="password"
+									placeholder="Masukkan nomor kata sandi kamu disini"
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none pr-12"
+								/>
+								<button
+									type="button"
+									class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+										></path>
 										<circle cx="12" cy="12" r="3"></circle>
 									</svg>
 								</button>
 							</div>
 						</div>
-						
-						<button type="submit" class="w-full bg-[#347928] text-white py-3 rounded-lg font-medium hover:bg-[#2a6021] transition-colors">
+
+						<button
+							type="submit"
+							class="w-full bg-[#347928] text-white py-3 rounded-lg font-medium hover:bg-[#2a6021] transition-colors"
+						>
 							Daftar
 						</button>
-						
+
 						<div class="text-center">
 							<span class="text-gray-500">Atau</span>
 						</div>
-						
-						<button type="button" class="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-								<path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-								<path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-								<path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-								<path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+
+						<button
+							type="button"
+							class="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+							>
+								<path
+									fill="#4285F4"
+									d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+								/>
+								<path
+									fill="#34A853"
+									d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+								/>
+								<path
+									fill="#FBBC05"
+									d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+								/>
+								<path
+									fill="#EA4335"
+									d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+								/>
 							</svg>
 							Daftar dengan Google
 						</button>
-						
+
 						<div class="text-center">
 							<span class="text-gray-600">Sudah punya akun? </span>
-							<button type="button" id="showLogin" class="text-[#347928] font-medium hover:underline">Masuk Sekarang</button>
+							<button
+								type="button"
+								id="showLogin"
+								class="text-[#347928] font-medium hover:underline"
+							>
+								Masuk Sekarang
+							</button>
 						</div>
 					</form>
 				</div>
@@ -1346,15 +1842,239 @@
 				/>
 			</div>
 		</div>
+
+		<!-- Booking Modal -->
+		<div
+			id="bookingModal"
+			class="fixed inset-0 hidden z-300 bg-black/50 backdrop-blur-sm items-center justify-center p-4"
+		>
+			<div
+				class="bg-white rounded-3xl w-full max-w-md mx-auto shadow-2xl transform transition-all duration-300"
+				id="bookingModalContent"
+			>
+				<!-- Modal Header -->
+				<div
+					class="flex items-center justify-between p-6 border-b border-gray-100"
+				>
+					<div>
+						<h2 class="text-xl font-bold text-gray-900">
+							Booking Petualangan Terbaik Bersama Anak Alam
+						</h2>
+						<p class="text-sm text-gray-600 mt-1">
+							Cukup isi form dibawah ini untuk mulai petualanganmu
+						</p>
+					</div>
+					<button
+						id="closeBookingModal"
+						class="text-gray-400 hover:text-gray-600 transition-colors"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+						</svg>
+					</button>
+				</div>
+
+				<!-- Modal Body -->
+				<form id="bookingForm" class="p-6 space-y-4">
+					<!-- Nama Lengkap -->
+					<div>
+						<label class="block text-sm font-medium text-gray-700 mb-2"
+							>Nama Lengkap</label
+						>
+						<input
+							type="text"
+							id="bookingName"
+							name="name"
+							placeholder="Masukkan nama lengkap kamu disini"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none transition-all"
+							required
+						/>
+					</div>
+
+					<!-- Nomor WhatsApp -->
+					<div>
+						<label class="block text-sm font-medium text-gray-700 mb-2"
+							>Nomor Whatsapp</label
+						>
+						<div class="relative">
+							<input
+								type="tel"
+								id="bookingWhatsapp"
+								name="whatsapp"
+								placeholder="Masukan nomor whatsapp kamu disini"
+								class="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none transition-all"
+								required
+							/>
+							<div class="absolute right-3 top-1/2 transform -translate-y-1/2">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="#25D366"
+								>
+									<path
+										d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.097"
+									/>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<!-- Paket -->
+					<div>
+						<label class="block text-sm font-medium text-gray-700 mb-2"
+							>Paket</label
+						>
+						<div class="relative">
+							<select
+								id="bookingPackage"
+								name="package"
+								class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none appearance-none transition-all"
+								required
+							>
+								<option value="">Pilih paket</option>
+								<option value="canyoneering-curug-gogor-185000">
+									Canyoneering - Curug Gogor - Rp185.000
+								</option>
+								<option value="hiking-gunung-slamet-250000">
+									Hiking - Gunung Slamet - Rp250.000
+								</option>
+								<option value="canyoneering-curug-bayan-200000">
+									Canyoneering - Curug Bayan - Rp200.000
+								</option>
+							</select>
+							<div
+								class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polyline points="6 9 12 15 18 9"></polyline>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<!-- Pilih Tanggal -->
+					<div>
+						<label class="block text-sm font-medium text-gray-700 mb-2"
+							>Pilih Tanggal</label
+						>
+						<div class="relative">
+							<input
+								type="date"
+								id="bookingDate"
+								name="date"
+								class="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none transition-all"
+								required
+							/>
+							<div
+								class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+									<line x1="16" y1="2" x2="16" y2="6"></line>
+									<line x1="8" y1="2" x2="8" y2="6"></line>
+									<line x1="3" y1="10" x2="21" y2="10"></line>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<!-- Jumlah Partisipan -->
+					<div>
+						<label class="block text-sm font-medium text-gray-700 mb-2"
+							>Jumlah Partisipan</label
+						>
+						<input
+							id="bookingParticipants"
+							type="number"
+							name="participants"
+							class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#347928] focus:border-transparent outline-none appearance-none transition-all"
+							required
+						/>
+					</div>
+
+					<!-- Total Pembayaran -->
+					<div class="bg-gray-50 p-4 rounded-lg">
+						<div class="flex justify-between items-center">
+							<span class="text-sm font-medium text-gray-700"
+								>Total Pembayaran</span
+							>
+							<span id="totalPrice" class="text-lg font-bold text-[#347928]"
+								>Rp0</span
+							>
+						</div>
+					</div>
+
+					<!-- Action Buttons -->
+					<div class="flex gap-3 pt-4">
+						<button
+							type="button"
+							id="cancelBooking"
+							class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+						>
+							Batal
+						</button>
+						<button
+							type="submit"
+							id="confirmBooking"
+							class="flex-1 px-6 py-3 bg-[#347928] text-white rounded-lg font-medium hover:bg-[#2a6021] transition-colors"
+						>
+							Bayar Sekarang
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 
-	<script src="./assets/js/script.js"></script>
+	<!-- External Libraries -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="./assets/js/swiper.js"></script>
-	<!-- FullCalendar JS -->
 	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
-	<script src="./assets/js/fullcalendar.js"></script>
 
+	<!-- Application Scripts -->
+	<script src="./assets/js/swiper.js"></script>
+	<script src="./assets/js/fullcalendar.js"></script>
 	<script src="./assets/js/testimonial-data.js"></script>
+
+	<!-- Modular Application Components -->
+	<script src="./assets/js/utils.js"></script>
+	<script src="./assets/js/hamburger-menu.js"></script>
+	<script src="./assets/js/image-modal.js"></script>
+	<script src="./assets/js/destination-filter.js"></script>
 	<script src="./assets/js/testimonial-carousel.js"></script>
+	<script src="./assets/js/auth-manager.js"></script>
+	<script src="./assets/js/booking-modal.js"></script>
+	<script src="./assets/js/main.js"></script>
 </html>

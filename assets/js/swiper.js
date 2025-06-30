@@ -30,14 +30,9 @@ new Swiper(".destination-swiper", {
 });
 const swiper = new Swiper(".testimonial-swiper", {
 	slidesPerView: 1,
-	spaceBetween: 10,
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
+	spaceBetween: 20,
 	pagination: {
 		el: ".swiper-pagination",
 		clickable: true,
 	},
-	loop: true,
 });

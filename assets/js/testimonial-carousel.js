@@ -1,173 +1,193 @@
-// Testimonial Carousel Implementation
-class TestimonialCarousel {
-    constructor() {
-        this.swiperInstance = null;
-        this.init();
-    }
+// Testimonial carousel functionality
 
-    init() {
-        this.renderTestimonials();
-        this.initSwiper();
-    }
+let currentTestimonialIndex = 0;
+let testimonialInterval;
+let testimonialData = [];
 
-    // Render testimonials ke dalam swiper wrapper
-    renderTestimonials() {
-        const swiperWrapper = document.querySelector('.testimonial-swiper .swiper-wrapper');
-        if (!swiperWrapper) return;
+/**
+ * Initialize testimonial carousel
+ */
+function initTestimonialCarousel() {
+	// Load testimonial data
+	loadTestimonialData();
 
-        const testimonialsHTML = window.testimonialsData.map(testimonial => {
-            return this.createTestimonialSlide(testimonial);
-        }).join('');
+	// Start auto-play
+	startTestimonialCarousel();
 
-        swiperWrapper.innerHTML = testimonialsHTML;
-    }
+	// Add event listeners for navigation
+	const prevBtn = document.querySelector(".testimonial-prev");
+	const nextBtn = document.querySelector(".testimonial-next");
 
-    // Membuat slide testimonial individual
-    createTestimonialSlide(testimonial) {
-        return `
-            <div class="swiper-slide">
-                <div class="testimonial-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mx-2">
-                    <!-- Header dengan avatar dan info -->
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="flex-shrink-0">
-                            <img 
-                                src="${testimonial.avatar}" 
-                                alt="${testimonial.name}"
-                                class="w-12 h-12 rounded-full object-cover border-2 border-green-100"
-                                onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'"
-                            >
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-center justify-between mb-1">
-                                <h4 class="font-semibold text-gray-900 truncate">${testimonial.name}</h4>
-                                <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                                    ${testimonial.location}
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2 mb-2">
-                                <div class="flex items-center">
-                                    ${stars}
-                                </div>
-                                <span class="text-sm text-gray-600">${testimonial.date}</span>
-                            </div>
-                            <div class="text-sm text-green-600 font-medium bg-green-50 px-2 py-1 rounded-md inline-block">
-                                ${testimonial.trip}
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial text -->
-                    <div class="testimonial-text">
-                        <p class="text-gray-700 leading-relaxed text-sm">
-                            "${testimonial.text}"
-                        </p>
-                    </div>
-                    
-                    <!-- Quote icon -->
-                    <div class="flex justify-end mt-4">
-                        <svg class="w-8 h-8 text-green-200" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
+	if (prevBtn) {
+		prevBtn.addEventListener("click", () => {
+			prevTestimonial();
+		});
+	}
 
-    // Inisialisasi Swiper untuk testimonials
-    initSwiper() {
-        // Tunggu sebentar untuk memastikan DOM sudah siap
-        setTimeout(() => {
-            this.swiperInstance = new Swiper('.testimonial-swiper', {
-                // Konfigurasi khusus untuk testimonials
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                
-                // Responsive breakpoints
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 24,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    1280: {
-                        slidesPerView: 3,
-                        spaceBetween: 32,
-                    }
-                },
-                
-                // Pagination
-                pagination: {
-                    el: '.testimonial-swiper .swiper-pagination',
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-                
-                // Navigation (opsional, bisa ditambahkan jika diperlukan)
-                // navigation: {
-                //     nextEl: '.testimonial-swiper .swiper-button-next',
-                //     prevEl: '.testimonial-swiper .swiper-button-prev',
-                // },
-                
-                // Effect
-                effect: 'slide',
-                
-                // Observer untuk update otomatis
-                observer: true,
-                observeParents: true,
-                
-                // Smooth transitions
-                speed: 600,
-                
-                // Grab cursor
-                grabCursor: true,
-            });
-        }, 100);
-    }
+	if (nextBtn) {
+		nextBtn.addEventListener("click", () => {
+			nextTestimonial();
+		});
+	}
 
-    // Method untuk update testimonials (jika diperlukan)
-    updateTestimonials(newTestimonials) {
-        if (newTestimonials && Array.isArray(newTestimonials)) {
-            window.testimonialsData = newTestimonials;
-            this.renderTestimonials();
-            if (this.swiperInstance) {
-                this.swiperInstance.update();
-            }
-        }
-    }
-
-    // Method untuk destroy swiper (cleanup)
-    destroy() {
-        if (this.swiperInstance) {
-            this.swiperInstance.destroy(true, true);
-            this.swiperInstance = null;
-        }
-    }
+	// Add click events to indicators
+	const indicators = document.querySelectorAll(".testimonial-indicator");
+	indicators.forEach((indicator, index) => {
+		indicator.addEventListener("click", () => {
+			goToTestimonial(index);
+		});
+	});
 }
 
-// Inisialisasi testimonial carousel saat DOM ready
-document.addEventListener('DOMContentLoaded', function() {
-    // Pastikan testimonialsData tersedia
-    if (typeof testimonialsData !== 'undefined') {
-        window.testimonialCarousel = new TestimonialCarousel();
-    } else {
-        console.error('testimonialsData tidak ditemukan. Pastikan testimonial-data.js sudah dimuat.');
-    }
+/**
+ * Load testimonial data from global variable or fallback
+ */
+function loadTestimonialData() {
+	// Check if testimonialData is available globally
+	if (window.testimonialData && Array.isArray(window.testimonialData)) {
+		testimonialData = window.testimonialData;
+	} else {
+		// Fallback data if global data is not available
+		testimonialData = [
+			{
+				name: "Sarah Johnson",
+				avatar: "assets/images/avatar1.jpg",
+				rating: 5,
+				review: "Pengalaman yang luar biasa! Pemandangan alam yang menakjubkan dan pelayanan yang sangat memuaskan."
+			},
+			{
+				name: "Ahmad Rahman",
+				avatar: "assets/images/avatar2.jpg",
+				rating: 5,
+				review: "Trip yang sangat berkesan. Guide yang berpengalaman dan destinasi yang indah sekali."
+			},
+			{
+				name: "Maria Santos",
+				avatar: "assets/images/avatar3.jpg",
+				rating: 4,
+				review: "Sangat direkomendasikan untuk yang suka petualangan alam. Fasilitas lengkap dan aman."
+			}
+		];
+	}
+
+	// Render initial testimonial
+	renderTestimonial(currentTestimonialIndex);
+	updateTestimonialIndicators();
+}
+
+/**
+ * Start testimonial auto-play
+ */
+function startTestimonialCarousel() {
+	testimonialInterval = setInterval(() => {
+		nextTestimonial();
+	}, 5000); // Change every 5 seconds
+}
+
+/**
+ * Stop testimonial auto-play
+ */
+function stopTestimonialCarousel() {
+	if (testimonialInterval) {
+		clearInterval(testimonialInterval);
+	}
+}
+
+/**
+ * Go to next testimonial
+ */
+function nextTestimonial() {
+	currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonialData.length;
+	renderTestimonial(currentTestimonialIndex);
+	updateTestimonialIndicators();
+}
+
+/**
+ * Go to previous testimonial
+ */
+function prevTestimonial() {
+	currentTestimonialIndex = currentTestimonialIndex === 0 ? testimonialData.length - 1 : currentTestimonialIndex - 1;
+	renderTestimonial(currentTestimonialIndex);
+	updateTestimonialIndicators();
+}
+
+/**
+ * Go to specific testimonial
+ * @param {number} index - The index of testimonial to show
+ */
+function goToTestimonial(index) {
+	currentTestimonialIndex = index;
+	renderTestimonial(currentTestimonialIndex);
+	updateTestimonialIndicators();
+}
+
+/**
+ * Render testimonial at given index
+ * @param {number} index - The index of testimonial to render
+ */
+function renderTestimonial(index) {
+	if (!testimonialData[index]) return;
+
+	const testimonial = testimonialData[index];
+	const container = document.querySelector(".testimonial-content");
+
+	if (container) {
+		container.innerHTML = `
+			<div class="testimonial-card bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+				<div class="flex items-center mb-4">
+					<img src="${testimonial.avatar}" alt="${testimonial.name}" class="w-12 h-12 rounded-full mr-4 object-cover">
+					<div>
+						<h4 class="font-semibold text-gray-800">${testimonial.name}</h4>
+						<div class="flex text-yellow-400">
+							${generateStars(testimonial.rating)}
+						</div>
+					</div>
+				</div>
+				<p class="text-gray-600 italic">"${testimonial.review}"</p>
+			</div>
+		`;
+	}
+}
+
+/**
+ * Generate star rating HTML
+ * @param {number} rating - The rating number (1-5)
+ * @returns {string} - HTML string for stars
+ */
+function generateStars(rating) {
+	let stars = "";
+	for (let i = 1; i <= 5; i++) {
+		if (i <= rating) {
+			stars += '<i class="fas fa-star"></i>';
+		} else {
+			stars += '<i class="far fa-star"></i>';
+		}
+	}
+	return stars;
+}
+
+/**
+ * Update testimonial indicators
+ */
+function updateTestimonialIndicators() {
+	const indicators = document.querySelectorAll(".testimonial-indicator");
+	indicators.forEach((indicator, index) => {
+		if (index === currentTestimonialIndex) {
+			indicator.classList.add("active");
+		} else {
+			indicator.classList.remove("active");
+		}
+	});
+}
+
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", initTestimonialCarousel);
+
+// Pause carousel when page is not visible
+document.addEventListener("visibilitychange", () => {
+	if (document.hidden) {
+		stopTestimonialCarousel();
+	} else {
+		startTestimonialCarousel();
+	}
 });
-
-// Export untuk penggunaan sebagai module (opsional)
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = TestimonialCarousel;
-}
