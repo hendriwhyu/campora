@@ -43,7 +43,10 @@ function initImageModal() {
  */
 function isImageModalOpen() {
 	const modal = document.getElementById("imageModal");
-	return modal && (!modal.classList.contains("hidden") || modal.classList.contains("active"));
+	return (
+		modal &&
+		(!modal.classList.contains("hidden") || modal.classList.contains("active"))
+	);
 }
 
 /**
@@ -54,7 +57,7 @@ function isImageModalOpen() {
 function openImageModal(src, alt) {
 	const modal = document.getElementById("imageModal");
 	const modalImg = document.getElementById("modalImage");
-	
+
 	if (!modal || !modalImg) {
 		console.error("Image modal elements not found");
 		return;
@@ -85,13 +88,13 @@ function openImageModal(src, alt) {
 function closeImageModal() {
 	const modal = document.getElementById("imageModal");
 	const modalImg = document.getElementById("modalImage");
-	
+
 	if (modal) {
 		// Hide modal using both methods for compatibility
 		modal.classList.add("hidden");
 		modal.classList.remove("flex", "active");
 		modal.style.display = "none";
-		
+
 		// Clear image source to prevent issues
 		if (modalImg) {
 			modalImg.src = "";
@@ -123,11 +126,11 @@ function addImageModalEventListeners() {
 		// Remove existing listeners to prevent duplicates
 		img.removeEventListener("click", handleImageModalClick);
 		img.addEventListener("click", handleImageModalClick);
-		
+
 		// Add cursor pointer style
 		img.style.cursor = "pointer";
 	});
-	
+
 	console.log("Added image modal listeners to", images.length, "images");
 }
 
@@ -141,26 +144,26 @@ function handleImageModalClick(e) {
 
 	const src = this.src;
 	const alt = this.alt;
-	
+
 	openImageModal(src, alt);
 }
 
 // Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 	console.log("DOM loaded, initializing image modal...");
 	initImageModal();
 	addImageModalEventListeners();
 });
 
 // Make functions available globally
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
 	window.ImageModal = {
 		init: initImageModal,
 		open: openImageModal,
 		close: closeImageModal,
-		addEventListeners: addImageModalEventListeners
+		addEventListeners: addImageModalEventListeners,
 	};
-	
+
 	// Make individual functions available globally
 	window.openImageModal = openImageModal;
 	window.closeImageModal = closeImageModal;

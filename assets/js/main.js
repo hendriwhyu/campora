@@ -5,35 +5,45 @@
  */
 function initializeApp() {
 	console.log("Initializing Campora application...");
-	
+
 	// Initialize core modules
 	try {
 		// Initialize utils first
 		console.log("Utils functions loaded");
-		
+
+		// Initialize hamburger menu
+		if (typeof initHamburgerMenu === "function") {
+			initHamburgerMenu();
+		}
+
 		// Initialize Swiper
 		if (typeof initAllSwipers === "function") {
 			initAllSwipers();
 		}
-		
+
 		// Initialize image modal
 		if (typeof initImageModal === "function") {
 			initImageModal();
 		}
-		
+
 		// Initialize destination filter
 		if (typeof initDestinationFilter === "function") {
 			initDestinationFilter();
 		}
-		
+
 		// Initialize booking modal
 		if (typeof initBookingModal === "function") {
 			initBookingModal();
 		}
-		
+
+		// Initialize auth manager
+		if (typeof initAuthManager === "function") {
+			initAuthManager();
+		}
+
 		// Add global event listeners
 		addGlobalEventListeners();
-		
+
 		console.log("All modules initialized successfully");
 	} catch (error) {
 		console.error("Error initializing application:", error);
@@ -69,12 +79,12 @@ function addGlobalEventListeners() {
 	document.addEventListener("visibilitychange", function () {
 		if (document.hidden) {
 			// Pause testimonial carousel when page is hidden
-			if (typeof stopTestimonialCarousel === 'function') {
+			if (typeof stopTestimonialCarousel === "function") {
 				stopTestimonialCarousel();
 			}
 		} else {
 			// Resume testimonial carousel when page is visible
-			if (typeof startTestimonialCarousel === 'function') {
+			if (typeof startTestimonialCarousel === "function") {
 				startTestimonialCarousel();
 			}
 		}
@@ -86,7 +96,7 @@ function addGlobalEventListeners() {
  */
 function closeAllModals() {
 	// Close image modal
-	if (typeof closeImageModal === 'function') {
+	if (typeof closeImageModal === "function") {
 		closeImageModal();
 	}
 
@@ -98,7 +108,7 @@ function closeAllModals() {
 	}
 
 	// Close booking modal
-	if (typeof closeBookingModal === 'function') {
+	if (typeof closeBookingModal === "function") {
 		closeBookingModal();
 	}
 
@@ -131,7 +141,7 @@ function isMobileDevice() {
  * @returns {boolean} - True if touch device
  */
 function isTouchDevice() {
-	return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+	return "ontouchstart" in window || navigator.maxTouchPoints > 0;
 }
 
 /**
@@ -142,8 +152,8 @@ function smoothScrollTo(elementId) {
 	const element = document.getElementById(elementId);
 	if (element) {
 		element.scrollIntoView({
-			behavior: 'smooth',
-			block: 'start'
+			behavior: "smooth",
+			block: "start",
 		});
 	}
 }
@@ -152,13 +162,14 @@ function smoothScrollTo(elementId) {
  * Show loading indicator
  * @param {string} message - Loading message
  */
-function showLoading(message = 'Loading...') {
+function showLoading(message = "Loading...") {
 	// Create loading overlay if it doesn't exist
-	let loadingOverlay = document.getElementById('loadingOverlay');
+	let loadingOverlay = document.getElementById("loadingOverlay");
 	if (!loadingOverlay) {
-		loadingOverlay = document.createElement('div');
-		loadingOverlay.id = 'loadingOverlay';
-		loadingOverlay.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+		loadingOverlay = document.createElement("div");
+		loadingOverlay.id = "loadingOverlay";
+		loadingOverlay.className =
+			"fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50";
 		loadingOverlay.innerHTML = `
 			<div class="bg-white p-6 rounded-lg shadow-lg text-center">
 				<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-[#347928] mx-auto mb-4"></div>
@@ -167,7 +178,7 @@ function showLoading(message = 'Loading...') {
 		`;
 		document.body.appendChild(loadingOverlay);
 	}
-	loadingOverlay.classList.remove('hidden');
+	loadingOverlay.classList.remove("hidden");
 	disableBodyScroll();
 }
 
@@ -175,9 +186,9 @@ function showLoading(message = 'Loading...') {
  * Hide loading indicator
  */
 function hideLoading() {
-	const loadingOverlay = document.getElementById('loadingOverlay');
+	const loadingOverlay = document.getElementById("loadingOverlay");
 	if (loadingOverlay) {
-		loadingOverlay.classList.add('hidden');
+		loadingOverlay.classList.add("hidden");
 		enableBodyScroll();
 	}
 }
@@ -187,22 +198,22 @@ function hideLoading() {
  * @param {string} message - Notification message
  * @param {string} type - Notification type ('success', 'error', 'info')
  */
-function showNotification(message, type = 'info') {
-	const notification = document.createElement('div');
+function showNotification(message, type = "info") {
+	const notification = document.createElement("div");
 	notification.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 transition-all duration-300 transform translate-x-full`;
-	
+
 	// Set notification style based on type
 	switch (type) {
-		case 'success':
-			notification.classList.add('bg-green-500', 'text-white');
+		case "success":
+			notification.classList.add("bg-green-500", "text-white");
 			break;
-		case 'error':
-			notification.classList.add('bg-red-500', 'text-white');
+		case "error":
+			notification.classList.add("bg-red-500", "text-white");
 			break;
 		default:
-			notification.classList.add('bg-blue-500', 'text-white');
+			notification.classList.add("bg-blue-500", "text-white");
 	}
-	
+
 	notification.innerHTML = `
 		<div class="flex items-center">
 			<span>${message}</span>
@@ -211,17 +222,17 @@ function showNotification(message, type = 'info') {
 			</button>
 		</div>
 	`;
-	
+
 	document.body.appendChild(notification);
-	
+
 	// Animate in
 	setTimeout(() => {
-		notification.classList.remove('translate-x-full');
+		notification.classList.remove("translate-x-full");
 	}, 100);
-	
+
 	// Auto remove after 5 seconds
 	setTimeout(() => {
-		notification.classList.add('translate-x-full');
+		notification.classList.add("translate-x-full");
 		setTimeout(() => {
 			if (notification.parentElement) {
 				notification.remove();
@@ -231,13 +242,13 @@ function showNotification(message, type = 'info') {
 }
 
 // Initialize app when DOM is loaded
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 	console.log("DOM fully loaded, initializing app...");
 	initializeApp();
 });
 
 // Also initialize when window is loaded (fallback)
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
 	console.log("Window loaded, ensuring app is initialized...");
 	if (!window.camporaAppInitialized) {
 		initializeApp();
@@ -253,5 +264,5 @@ window.CamporaApp = {
 	showLoading,
 	hideLoading,
 	showNotification,
-	closeAllModals
+	closeAllModals,
 };

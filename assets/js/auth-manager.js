@@ -182,20 +182,37 @@ function handleLogout() {
 function updateAuthUI() {
 	const loginBtn = document.getElementById("loginBtn");
 	const userMenu = document.getElementById("userMenu");
+	const userBtn = document.getElementById("userBtn");
 	const userName = document.getElementById("userName");
 	const userAvatar = document.getElementById("userAvatar");
 
 	if (isLoggedIn && currentUser) {
 		// Show user menu, hide login button
-		if (loginBtn) loginBtn.classList.add("hidden");
+		if (loginBtn) {
+			loginBtn.classList.add("hidden");
+			loginBtn.classList.remove("md:flex");
+		}
+		if (userBtn) {
+			userBtn.classList.remove("hidden");
+			userBtn.classList.add("md:flex");
+		}
 		if (userMenu) userMenu.classList.remove("hidden");
 		if (userName) userName.textContent = currentUser.name;
 		if (userAvatar) userAvatar.src = currentUser.avatar;
 	} else {
 		// Show login button, hide user menu
-		if (loginBtn) loginBtn.classList.remove("hidden");
+		if (loginBtn) {
+			loginBtn.classList.remove("hidden");
+			loginBtn.classList.add("md:flex");
+		}
+		if (userBtn) {
+			userBtn.classList.add("hidden");
+			userBtn.classList.remove("md:flex");
+		}
 		if (userMenu) userMenu.classList.add("hidden");
 	}
+
+	console.log("Auth UI updated. IsLoggedIn:", isLoggedIn);
 }
 
 /**
@@ -275,4 +292,24 @@ function initAuthManager() {
 
 	// Initialize UI based on login status
 	updateAuthUI();
+}
+
+// Initialize auth manager when DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+	console.log("DOM loaded, initializing auth manager...");
+	initAuthManager();
+});
+
+// Make functions available globally
+if (typeof window !== "undefined") {
+	window.AuthManager = {
+		init: initAuthManager,
+		login: handleLogin,
+		logout: handleLogout,
+		updateUI: updateAuthUI,
+	};
+
+	window.initAuthManager = initAuthManager;
+	window.openAuthModal = openAuthModal;
+	window.closeAuthModal = closeAuthModalHandler;
 }

@@ -12,7 +12,7 @@ function initHamburgerMenu() {
 		hamburger.addEventListener("click", function () {
 			hamburger.classList.toggle("active");
 			mobileMenu.classList.toggle("active");
-			
+
 			// Prevent body scroll when menu is open
 			if (mobileMenu.classList.contains("active")) {
 				disableBodyScroll();
@@ -33,4 +33,15 @@ function initHamburgerMenu() {
 			}
 		});
 	}
+}
+
+// Initialize hamburger menu when DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+	console.log("DOM loaded, initializing hamburger menu...");
+	initHamburgerMenu();
+});
+
+// Make function available globally
+if (typeof window !== "undefined") {
+	window.initHamburgerMenu = initHamburgerMenu;
 }
