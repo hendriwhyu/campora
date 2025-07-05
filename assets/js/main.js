@@ -13,9 +13,6 @@ function addGlobalEventListeners() {
 
 	// Handle window resize
 	window.addEventListener("resize", function () {
-		// Update Swiper on resize
-		updateSwiper();
-		
 		// Close mobile menu on desktop
 		if (window.innerWidth > 768) {
 			const hamburger = document.getElementById("hamburger-menu");

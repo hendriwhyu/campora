@@ -87,8 +87,27 @@ function hideElement(element) {
  * Update Swiper instance if available
  */
 function updateSwiper() {
-	if (window.swiper) {
-		window.swiper.update();
-		window.swiper.updateSlides();
+	if (window.destinationSwiper) {
+		window.destinationSwiper.update();
+		window.destinationSwiper.updateSlides();
+		window.destinationSwiper.updateProgress();
+		window.destinationSwiper.updateSlidesClasses();
+	}
+	
+	if (window.testimonialSwiper) {
+		window.testimonialSwiper.update();
+		window.testimonialSwiper.updateSlides();
+	}
+}
+
+/**
+ * Update destination swiper specifically
+ */
+function updateDestinationSwiper() {
+	if (window.destinationSwiper) {
+		window.destinationSwiper.update();
+		window.destinationSwiper.updateSlides();
+		window.destinationSwiper.updateProgress();
+		window.destinationSwiper.updateSlidesClasses();
 	}
 }

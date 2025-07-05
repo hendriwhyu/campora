@@ -218,7 +218,8 @@ body {
 
 /* User Dropdown Styles */
 #userDropdown {
-	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+		0 10px 10px -5px rgba(0, 0, 0, 0.04);
 	transition: all 0.2s ease-in-out;
 }
 
@@ -247,13 +248,47 @@ body {
 	display: flex;
 }
 
+/* Booking Modal Styles */
+#bookingModal {
+	z-index: 1000;
+}
+
+#bookingModal.hidden {
+	display: none !important;
+}
+
+#bookingModal:not(.hidden) {
+	display: flex !important;
+}
+
+#bookingModalContent {
+	max-height: 90vh;
+	overflow-y: auto;
+}
+
+/* Ensure modal appears above swiper */
+.swiper {
+	z-index: 1;
+}
+
+/* Debug styles for booking buttons */
+[data-booking-btn] {
+	cursor: pointer !important;
+	position: relative;
+	z-index: 10;
+}
+
+[data-booking-btn]:hover {
+	opacity: 0.9;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
 	#authModal .bg-white {
 		margin: 1rem;
 		max-width: calc(100vw - 2rem);
 	}
-	
+
 	#userDropdown {
 		width: 280px;
 		right: -1rem;
