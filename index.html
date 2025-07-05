@@ -3,25 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Campora - Jelajahi Alam Indonesia</title>
+		<title>Anak Alam - Jelajahi Alam Indonesia</title>
 		<meta
 			name="description"
-			content="Campora adalah platform untuk menjelajahi dan booking destinasi camping terbaik di Indonesia. Temukan pengalaman alam, wisata, dan petualangan seru bersama Campora."
+			content="Anak Alam adalah platform untuk menjelajahi dan booking destinasi camping terbaik di Indonesia. Temukan pengalaman alam, wisata, dan petualangan seru bersama Anak Alam."
 		/>
 		<meta
 			name="keywords"
-			content="camping, wisata alam, destinasi camping, Indonesia, booking camping, petualangan, travel, outdoor, nature, campora"
+			content="camping, wisata alam, destinasi camping, Indonesia, booking camping, petualangan, travel, outdoor, nature, anak alam"
 		/>
-		<meta name="author" content="Campora Team" />
-		<meta property="og:title" content="Campora - Jelajahi Alam Indonesia" />
+		<meta name="author" content="Anak Alam Team" />
+		<meta property="og:title" content="Anak Alam - Jelajahi Alam Indonesia" />
 		<meta
 			property="og:description"
-			content="Temukan dan booking destinasi camping terbaik di Indonesia bersama Campora. Nikmati keindahan alam dan petualangan seru!"
+			content="Temukan dan booking destinasi camping terbaik di Indonesia bersama Anak Alam. Nikmati keindahan alam dan petualangan seru!"
 		/>
-		<meta name="twitter:title" content="Campora - Jelajahi Alam Indonesia" />
+		<meta name="twitter:title" content="Anak Alam - Jelajahi Alam Indonesia" />
 		<meta
 			name="twitter:description"
-			content="Temukan dan booking destinasi camping terbaik di Indonesia bersama Campora."
+			content="Temukan dan booking destinasi camping terbaik di Indonesia bersama Anak Alam."
 		/>
 		<meta
 			name="twitter:image"
@@ -56,7 +56,7 @@
 						<a href="/" class="flex items-center gap-2">
 							<img
 								src="./assets/img/logo-header.png"
-								alt="Logo"
+								alt="Logo Anak Alam"
 								class="h-[40px] ml-4"
 							/>
 						</a>
@@ -104,7 +104,7 @@
 								</svg>
 								<span> Home </span>
 							</a>
-							<a href="#about" class="flex items-center gap-2">
+							<a href="#about-section" class="flex items-center gap-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="18"
@@ -122,7 +122,7 @@
 								</svg>
 								Why Go Camping
 							</a>
-							<a href="#destinations" class="flex items-center gap-2">
+							<a href="#destination-section" class="flex items-center gap-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="18"
@@ -139,7 +139,7 @@
 								</svg>
 								Top Destinations
 							</a>
-							<a href="/how-it-works" class="flex items-center gap-2">
+							<a href="#calendar-section" class="flex items-center gap-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="18"
@@ -163,7 +163,7 @@
 							<!-- Login Button (Desktop) -->
 							<button
 								id="loginBtn"
-								class="flex login-btn items-center gap-2 text-nowrap"
+								class="flex login-btn items-center gap-2 text-nowrap group"
 							>
 								Masuk
 								<svg
@@ -176,6 +176,7 @@
 									stroke-width="2"
 									stroke-linecap="round"
 									stroke-linejoin="round"
+									class="-rotate-45 group-hover:rotate-0 transition-transform duration-200"
 								>
 									<circle cx="12" cy="12" r="10" />
 									<path d="M12 8l4 4-4 4" />
@@ -369,7 +370,7 @@
 							</a>
 							<a
 								href="#destination-section"
-								class="start-journey-btn inline-flex justify-center items-center gap-2 text-lg"
+								class="start-journey-btn inline-flex justify-center items-center gap-2 text-lg group"
 							>
 								Ayo Mulai Sekarang
 								<svg
@@ -382,6 +383,7 @@
 									stroke-width="2"
 									stroke-linecap="round"
 									stroke-linejoin="round"
+									class="-rotate-45 group-hover:rotate-0 transition-transform duration-200"
 								>
 									<circle cx="12" cy="12" r="10" />
 									<path d="M12 8l4 4-4 4" />
@@ -395,11 +397,25 @@
 
 			<!-- About Section -->
 			<section id="about-section" class="flex flex-col gap-8 mx-4 my-8 p-2.25">
-				<div class="flex flex-col gap-2">
-					<span class="rounded-full bg-[#EBF2EA] text-black w-fit px-6 py-2"
-						>Kenapa Anak Alam</span
+				<div class="flex flex-col gap-4">
+					<span
+						class="rounded-full bg-[#EBF2EA] text-black w-fit px-4 py-2 flex gap-2"
+						><img
+							src="./assets/img/icons/terrain-icon.svg"
+							alt="terrain-icon"
+							width="16"
+						/>
+						Kenapa Anak Alam</span
 					>
-					<h1 class="text-4xl text-black font-semibold">Kenapa Anak Alam?</h1>
+					<h1 class="text-2xl md:text-4xl text-black font-semibold flex gap-2">
+						Kenapa
+						<img
+							src="./assets/img/icons/lamp-icon.svg"
+							width="30"
+							alt="lamp-icon"
+						/>
+						Anak Alam?
+					</h1>
 					<p class="text-[#666161]">
 						Kami percaya petualangan terbaik adalah yang menyentuh hati, memacu
 						adrenalin, dan memberi makna
@@ -473,24 +489,23 @@
 			>
 				<div class="flex flex-col gap-4 p-[10px]">
 					<span
-						class="inline-flex items-center gap-2 text-black bg-[#EBF2EA] w-fit px-6 py-2 rounded-full"
+						class="inline-flex items-center gap-2 text-black bg-[#EBF2EA] w-fit px-4 py-2 rounded-full flex gap-2"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="#4CAF50"
-						>
-							<path
-								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-							/>
-							<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
-						</svg>
+						<img
+							src="./assets/img/icons/terrain-icon.svg"
+							alt="terrain-icon"
+							width="16"
+						/>
 						Paket Destinasi
 					</span>
-					<h2 class="text-4xl font-bold text-white">
+					<h2 class="text-4xl font-bold text-white flex gap-4">
 						Jelajahi Curug & Gunung Terbaik
+						<img
+							src="./assets/img/icons/hiking-icon.svg"
+							alt="hiking-icon"
+							width="32"
+							class="hidden md:inline-block"
+						/>
 					</h2>
 					<p class="text-white max-w-2xl">
 						Dari derasnya curug ke dinginnya puncak, Anak Alam siap bawa kamu
@@ -782,9 +797,7 @@
 														<li class="flex items-center gap-2">
 															<span>📸</span> Spot Foto Instagramable
 														</li>
-														<li class="flex items-center gap-2">
-															<span>🥾</span> Jalur Tracking Menantang
-														</li>
+														<li class="flex items-center gap-2"></li>
 														<li class="flex items-center gap-2">
 															<span>🏊</span> Kolam Alami untuk Berenang
 														</li>
@@ -874,23 +887,24 @@
 				/>
 				<div class="flex flex-col gap-4">
 					<span
-						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] w-fit px-6 py-2 rounded-full"
+						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] w-fit px-4 py-2 rounded-full flex gap-2"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="#4CAF50"
-						>
-							<path
-								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-							/>
-							<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
-						</svg>
+						<img
+							src="./assets/img/icons/terrain-icon.svg"
+							alt="terrain-icon"
+							width="16"
+						/>
 						Cek Jadwal
 					</span>
-					<h2 class="text-4xl font-bold">Pilih Jadwal Petualanganmu</h2>
+					<h2 class="text-4xl font-bold flex gap-4">
+						Pilih Jadwal Petualanganmu
+						<img
+							src="./assets/img/icons/terrain-icon.svg"
+							alt="terrain-icon"
+							width="30"
+							class="hidden md:inline-block"
+						/>
+					</h2>
 					<p class="max-w-2xl">
 						Cek tanggal open trip Anak Alam untuk pendakian dan canyoneering.
 					</p>
@@ -930,20 +944,13 @@
 				</h1>
 				<div class="flex flex-col gap-4 z-10 text-center items-center">
 					<span
-						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] font-semibold w-fit px-6 py-2 rounded-full"
+						class="inline-flex items-center gap-2 text-sm bg-[#EBF2EA] w-fit px-4 py-2 rounded-full flex gap-2"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="#4CAF50"
-						>
-							<path
-								d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-							/>
-							<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
-						</svg>
+						<img
+							src="./assets/img/icons/terrain-icon.svg"
+							alt="terrain-icon"
+							width="16"
+						/>
 						Testimoni
 					</span>
 					<h2 class="text-4xl font-bold text-black">Apa Kata Mereka?</h2>
@@ -1449,20 +1456,13 @@
 					<div class="relative z-10 flex flex-col gap-6 max-w-4xl">
 						<div class="flex flex-col gap-4">
 							<span
-								class="inline-flex items-center gap-2 text-sm bg-[#DDDDDD] text-gray-700 font-medium w-fit px-4 py-1.5 rounded-full"
+								class="inline-flex items-center gap-2 text-sm bg-[#DDDDDD] text-gray-700 font-medium w-fit px-4 py-2 rounded-full flex gap-2"
 							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									fill="#4CAF50"
-								>
-									<path
-										d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-									/>
-									<path d="M13 7h-2v5.586l3.707 3.707 1.414-1.414L13 11.758z" />
-								</svg>
+								<img
+									src="./assets/img/icons/terrain-icon.svg"
+									alt="terrain-icon"
+									width="16"
+								/>
 								Apa yang kamu tunggu?
 							</span>
 							<h1
@@ -1475,10 +1475,26 @@
 							</p>
 						</div>
 						<a
-							href="#booking"
-							class="inline-flex items-center gap-2 bg-[#347928] text-white px-6 py-3 rounded-full shadow-md w-fit hover:bg-[#2a6021] transition mt-8"
+							href="#destination-section"
+							class="inline-flex items-center gap-2 bg-[#347928] text-white px-6 py-3 rounded-full shadow-md w-fit hover:bg-[#2a6021] transition mt-8 group"
 						>
 							Ayo Mulai Sekarang
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="-rotate-45 group-hover:rotate-0 transition-transform duration-200"
+							>
+								<circle cx="12" cy="12" r="10" />
+								<path d="M12 8l4 4-4 4" />
+								<path d="M8 12h8" />
+							</svg>
 						</a>
 					</div>
 
@@ -1500,7 +1516,7 @@
 					<div class="flex flex-col gap-4 md:max-w-sm">
 						<img
 							src="./assets/img/logo-footer.svg"
-							alt="footer-logo"
+							alt="footer-logo-anak-alam"
 							class="h-[40px] w-[150px]"
 						/>
 						<p class="font-semibold text-2xl">
@@ -1511,9 +1527,9 @@
 					<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 						<div class="flex flex-col gap-2">
 							<h3 class="text-lg font-bold">Kontak kami</h3>
-							<a href="#">Why Go Camping</a>
-							<a href="#">Top Destinations</a>
-							<a href="#">How It Works</a>
+							<a href="#about-section">Why Go Camping</a>
+							<a href="#destination-section">Top Destinations</a>
+							<a href="#calendar-section">How It Works</a>
 						</div>
 						<div class="flex flex-col gap-2">
 							<h3 class="text-lg font-bold">Company</h3>
