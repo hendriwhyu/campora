@@ -1,6 +1,46 @@
 // Main application file - initializes all modules and handles global events
 
 /**
+ * Initialize all application modules
+ */
+function initializeApp() {
+	console.log("Initializing Campora application...");
+	
+	// Initialize core modules
+	try {
+		// Initialize utils first
+		console.log("Utils functions loaded");
+		
+		// Initialize Swiper
+		if (typeof initAllSwipers === "function") {
+			initAllSwipers();
+		}
+		
+		// Initialize image modal
+		if (typeof initImageModal === "function") {
+			initImageModal();
+		}
+		
+		// Initialize destination filter
+		if (typeof initDestinationFilter === "function") {
+			initDestinationFilter();
+		}
+		
+		// Initialize booking modal
+		if (typeof initBookingModal === "function") {
+			initBookingModal();
+		}
+		
+		// Add global event listeners
+		addGlobalEventListeners();
+		
+		console.log("All modules initialized successfully");
+	} catch (error) {
+		console.error("Error initializing application:", error);
+	}
+}
+
+/**
  * Add global event listeners
  */
 function addGlobalEventListeners() {
@@ -190,24 +230,20 @@ function showNotification(message, type = 'info') {
 	}, 5000);
 }
 
-/**
- * Initialize all application modules
- */
-function initApp() {
-	// Initialize all modules
-	initHamburgerMenu();
-	initImageModal();
-	initDestinationFilter();
-	initTestimonialCarousel();
-	initAuthManager();
-	initBookingModal();
-
-	// Add global event listeners
-	addGlobalEventListeners();
-}
-
 // Initialize app when DOM is loaded
-document.addEventListener("DOMContentLoaded", initApp);
+document.addEventListener("DOMContentLoaded", function() {
+	console.log("DOM fully loaded, initializing app...");
+	initializeApp();
+});
+
+// Also initialize when window is loaded (fallback)
+window.addEventListener("load", function() {
+	console.log("Window loaded, ensuring app is initialized...");
+	if (!window.camporaAppInitialized) {
+		initializeApp();
+		window.camporaAppInitialized = true;
+	}
+});
 
 // Make utility functions available globally
 window.CamporaApp = {

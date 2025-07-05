@@ -137,9 +137,23 @@ body {
 }
 
 /* Animasi untuk modal */
-#imageModal.active {
-	display: flex;
+#imageModal {
+	transition: all 0.3s ease-in-out;
+	z-index: 200;
+}
+
+#imageModal.active,
+#imageModal:not(.hidden) {
+	display: flex !important;
 	animation: fadeIn 0.3s ease-in-out;
+}
+
+#imageModal.hidden {
+	display: none !important;
+}
+
+#imageModal .relative {
+	animation: slideIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -149,6 +163,29 @@ body {
 	to {
 		opacity: 1;
 	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/* Close button styles */
+#closeModal {
+	z-index: 201;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+#closeModal:hover {
+	transform: scale(1.1);
+	color: #ff6b6b !important;
 }
 
 /* Swiper Styles */
